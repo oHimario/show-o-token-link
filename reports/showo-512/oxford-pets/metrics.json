@@ -1,0 +1,572 @@
+{
+  "summary": {
+    "resolution": 512,
+    "scope": "complete official test",
+    "overall": {
+      "samples": 3669,
+      "correct": 3627,
+      "accuracy": 0.9885527391659853,
+      "balanced_accuracy": 0.9835776884789819,
+      "per_species": {
+        "cat": {
+          "samples": 1183,
+          "correct": 1147,
+          "invalid": 1,
+          "accuracy": 0.9695688926458157
+        },
+        "dog": {
+          "samples": 2486,
+          "correct": 2480,
+          "invalid": 4,
+          "accuracy": 0.997586484312148
+        }
+      },
+      "invalid": 5,
+      "invalid_rate": 0.001362769146906514,
+      "strict_correct": 2373,
+      "strict_accuracy": 0.6467702371218316,
+      "strict_invalid": 1271,
+      "truncated": 0,
+      "wilson_95_interval": [
+        0.984563621808389,
+        0.9915198553554506
+      ],
+      "confusion": {
+        "cat": {
+          "cat": 1147,
+          "dog": 35,
+          "invalid": 1
+        },
+        "dog": {
+          "cat": 2,
+          "dog": 2480,
+          "invalid": 4
+        }
+      }
+    },
+    "previous_200": {
+      "samples": 200,
+      "correct": 195,
+      "accuracy": 0.975,
+      "balanced_accuracy": 0.975,
+      "per_species": {
+        "cat": {
+          "samples": 100,
+          "correct": 95,
+          "invalid": 0,
+          "accuracy": 0.95
+        },
+        "dog": {
+          "samples": 100,
+          "correct": 100,
+          "invalid": 0,
+          "accuracy": 1.0
+        }
+      },
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "strict_correct": 111,
+      "strict_accuracy": 0.555,
+      "strict_invalid": 85,
+      "truncated": 0,
+      "wilson_95_interval": [
+        0.9428208558483829,
+        0.9892754385292123
+      ],
+      "confusion": {
+        "cat": {
+          "cat": 95,
+          "dog": 5,
+          "invalid": 0
+        },
+        "dog": {
+          "cat": 0,
+          "dog": 100,
+          "invalid": 0
+        }
+      }
+    },
+    "remaining_3469": {
+      "samples": 3469,
+      "correct": 3432,
+      "accuracy": 0.9893341020466994,
+      "balanced_accuracy": 0.9844305695194886,
+      "per_species": {
+        "cat": {
+          "samples": 1083,
+          "correct": 1052,
+          "invalid": 1,
+          "accuracy": 0.971375807940905
+        },
+        "dog": {
+          "samples": 2386,
+          "correct": 2380,
+          "invalid": 4,
+          "accuracy": 0.9974853310980721
+        }
+      },
+      "invalid": 5,
+      "invalid_rate": 0.0014413375612568463,
+      "strict_correct": 2262,
+      "strict_accuracy": 0.6520611127125973,
+      "strict_invalid": 1186,
+      "truncated": 0,
+      "wilson_95_interval": [
+        0.9853336762593069,
+        0.9922519412361758
+      ],
+      "confusion": {
+        "cat": {
+          "cat": 1052,
+          "dog": 30,
+          "invalid": 1
+        },
+        "dog": {
+          "cat": 2,
+          "dog": 2380,
+          "invalid": 4
+        }
+      }
+    },
+    "answer_frequencies": {
+      " Cat": 448,
+      " The pet in the image is a cat.": 701,
+      " Dog": 1950,
+      " The pet in the image is a dog.": 562,
+      " The pet in the image is a small dog.": 3,
+      " The pet in the image is a pug dog.": 4,
+      " A cat is in the image.": 1
+    },
+    "finished_at_utc": "2026-10-12T09:54:08.080188+00:00"
+  },
+  "phases": {
+    "encoding": {
+      "images": 3669,
+      "encoded": 3469,
+      "reused": 200,
+      "metrics": {
+        "seconds": 859.1445,
+        "peak_allocated_mib": 1390.16,
+        "peak_reserved_mib": 1564.0,
+        "sampled_device_peak_mib": 1681.0,
+        "sampled_cpu_rss_peak_mib": 1133.8,
+        "measurement": "PyTorch process allocator, includes model loading; excludes driver/other processes",
+        "device_measurement": "nvidia-smi device 0 total used memory sampled about every 0.2s plus query time; may miss brief peaks and includes other processes"
+      },
+      "finished_at_utc": "2026-10-12T08:44:08.606592+00:00"
+    },
+    "inference": {
+      "images": 3669,
+      "new_answers": 3669,
+      "resumed_answers": 0,
+      "old_200_answers_reused": false,
+      "receiver_image_access_guard": true,
+      "receiver_imported_visual_encoder": false,
+      "metrics": {
+        "seconds": 4195.0719,
+        "peak_allocated_mib": 3155.01,
+        "peak_reserved_mib": 3726.0,
+        "sampled_device_peak_mib": 3839.0,
+        "sampled_cpu_rss_peak_mib": 7389.25,
+        "measurement": "PyTorch process allocator, includes model loading; excludes driver/other processes",
+        "device_measurement": "nvidia-smi device 0 total used memory sampled about every 0.2s plus query time; may miss brief peaks and includes other processes"
+      },
+      "finished_at_utc": "2026-10-12T09:54:08.080188+00:00"
+    }
+  },
+  "protocol": {
+    "frozen_at_utc": "2026-10-12T08:29:36.086828+00:00",
+    "user_instruction": "猫狗分类256和512都跑完整数据集",
+    "split": "complete official test",
+    "samples": 3669,
+    "counts": {
+      "cat": 1183,
+      "dog": 2486
+    },
+    "question": "Is the pet in the image a cat or a dog? Answer with only cat or dog.",
+    "max_new_tokens": 16,
+    "content_pattern": "(?:the pet in the image is |the animal in the image is |the image shows |it is )?(?:a |an |the )?(?:(?:small|large|big|little|black|white|brown|gray|grey|orange|ginger|fluffy|striped|spotted) ){0,3}(cat|dog)[.!]?",
+    "primary_parser": "Existing tools.experiment_512.content_label fullmatch, invalid incorrect",
+    "secondary_parser": "Existing baseline.parse_answer exact species label, invalid incorrect",
+    "parser_origin": "Existing 512 parser, fixed before this complete test for both models; no tuning",
+    "decoding": {
+      "top_k": 1,
+      "temperature": 1.0,
+      "seed": 0
+    },
+    "batch_size": 1,
+    "encoder_dtype": "float32",
+    "showo_dtype": "float16",
+    "cuda_autocast": "float16",
+    "answer_reuse": false,
+    "encoding_reuse": "Only verified existing same-image same-resolution packets",
+    "receiver": "Fresh process; saved raw IDs only; image-open guard; no MAGVIT import",
+    "reference_sample_ids": [
+      "Birman_23",
+      "Bombay_37",
+      "Abyssinian_57",
+      "scottish_terrier_37",
+      "havanese_50",
+      "beagle_29"
+    ],
+    "reference_scope": "Six fixed new test images per model, 3 cat and 3 dog",
+    "limitations": [
+      "Complete test species are imbalanced; report per-species and balanced accuracy",
+      "Previous 200 exploratory samples overlap; separately report remaining 3469",
+      "Parser failures can differ from semantic recognition failures",
+      "Center crops can omit the labeled pet; pretraining overlap not audited",
+      "Two checkpoints differ in training; comparison does not isolate resolution",
+      "No communication perturbations, training or image generation"
+    ],
+    "source_sha256": {
+      "link.py": "d732b56460d2d0d777bea422eb3de9d3e2244083820fd82df750b039c730301e",
+      "baseline.py": "3e52449f8f46c55179a2f8429b1822537387f24cfc89645f965af672c6c0813f",
+      "tools/experiment_pets_full.py": "0080dee5a6a55a46178a7df803a2065008e7d7e35349d024b1052aaf28c4cc94",
+      "tools/experiment_512.py": "9e186972010f0e5b58becd62d553d78c40238d715c5cbf82c2d9f75e07a62266",
+      "data/oxford-pets/full-test-manifest.json": "73f16656ecccfcfe1d04d1234aa09432718ae2183d06d5bd271d7c39fa5abb63",
+      "weights/manifest.json": "74a09d0c24c0906b2f70f096b149ccebbf4f5f0d0e95e7a1e1a1c9098b48e40d",
+      "weights/showo-512/manifest.json": "50c10d44b789ce6c560e2a343aab08405694ef1f4805d66e3f587709f1bc833d",
+      "data/oxford-pets/encodings/showo-256/full-test-manifest.json": "b33058062a94d6fa4886f56cbbb8a91c2b8993f268762f6539dddcdcf3946a73",
+      "data/oxford-pets/encodings/showo-512/full-test-manifest.json": "1af4f36965ca345fda51be68a52acabe0d28607c7c99cb1208b713405c24cea9"
+    },
+    "resolution": 512,
+    "model": {
+      "repo_id": "showlab/show-o-512x512",
+      "revision": "dbe757d951099968fb102d249d35a764528df2dd",
+      "official_url": "https://huggingface.co/showlab/show-o-512x512/tree/dbe757d951099968fb102d249d35a764528df2dd",
+      "download_endpoint": "https://hf-mirror.com",
+      "expected_files": {
+        "config.json": {
+          "bytes": 280,
+          "git_blob_sha1": "e1cc72339c554a3e37f87ef75a8964bc07a6287e"
+        },
+        "pytorch_model.safetensors": {
+          "bytes": 5792758016,
+          "sha256": "638739e52da4f5cba220b7cd59c04819f852dda180124c5a32c9c48b35a7299f"
+        }
+      },
+      "downloader": "curl",
+      "metadata_source": "Official repository metadata via hf-mirror.com; pinned git and LFS identities",
+      "ready": true,
+      "files": {
+        "config.json": {
+          "bytes": 280,
+          "sha256": "fa1bd4b6b1290e23203ae050282c3c23ffa44e9f714e5fe545f145a1a4584c7e"
+        },
+        "pytorch_model.safetensors": {
+          "bytes": 5792758016,
+          "sha256": "638739e52da4f5cba220b7cd59c04819f852dda180124c5a32c9c48b35a7299f"
+        }
+      }
+    }
+  },
+  "original_protocol_sha256": "db07131afc4eafb3069110fba4fb4e9f1f749b9100a4f2e1318b4066b7a03e66",
+  "reference": {
+    "passed": true,
+    "images": 6,
+    "rows": [
+      {
+        "sample_id": "Abyssinian_57",
+        "ids_equal": true,
+        "fields_equal": {
+          "input_ids": true,
+          "generated_ids": true,
+          "answer": true,
+          "question": true,
+          "decoding": true,
+          "showo_revision": true,
+          "phi_revision": true,
+          "showo_dtype": true,
+          "cuda_autocast": true,
+          "visual_vocab_offset": true,
+          "attention_implementation": true
+        },
+        "passed": true
+      },
+      {
+        "sample_id": "beagle_29",
+        "ids_equal": true,
+        "fields_equal": {
+          "input_ids": true,
+          "generated_ids": true,
+          "answer": true,
+          "question": true,
+          "decoding": true,
+          "showo_revision": true,
+          "phi_revision": true,
+          "showo_dtype": true,
+          "cuda_autocast": true,
+          "visual_vocab_offset": true,
+          "attention_implementation": true
+        },
+        "passed": true
+      },
+      {
+        "sample_id": "Birman_23",
+        "ids_equal": true,
+        "fields_equal": {
+          "input_ids": true,
+          "generated_ids": true,
+          "answer": true,
+          "question": true,
+          "decoding": true,
+          "showo_revision": true,
+          "phi_revision": true,
+          "showo_dtype": true,
+          "cuda_autocast": true,
+          "visual_vocab_offset": true,
+          "attention_implementation": true
+        },
+        "passed": true
+      },
+      {
+        "sample_id": "Bombay_37",
+        "ids_equal": true,
+        "fields_equal": {
+          "input_ids": true,
+          "generated_ids": true,
+          "answer": true,
+          "question": true,
+          "decoding": true,
+          "showo_revision": true,
+          "phi_revision": true,
+          "showo_dtype": true,
+          "cuda_autocast": true,
+          "visual_vocab_offset": true,
+          "attention_implementation": true
+        },
+        "passed": true
+      },
+      {
+        "sample_id": "havanese_50",
+        "ids_equal": true,
+        "fields_equal": {
+          "input_ids": true,
+          "generated_ids": true,
+          "answer": true,
+          "question": true,
+          "decoding": true,
+          "showo_revision": true,
+          "phi_revision": true,
+          "showo_dtype": true,
+          "cuda_autocast": true,
+          "visual_vocab_offset": true,
+          "attention_implementation": true
+        },
+        "passed": true
+      },
+      {
+        "sample_id": "scottish_terrier_37",
+        "ids_equal": true,
+        "fields_equal": {
+          "input_ids": true,
+          "generated_ids": true,
+          "answer": true,
+          "question": true,
+          "decoding": true,
+          "showo_revision": true,
+          "phi_revision": true,
+          "showo_dtype": true,
+          "cuda_autocast": true,
+          "visual_vocab_offset": true,
+          "attention_implementation": true
+        },
+        "passed": true
+      }
+    ],
+    "metrics": {
+      "seconds": 45.7058,
+      "peak_allocated_mib": 4159.38,
+      "peak_reserved_mib": 4870.0,
+      "sampled_device_peak_mib": 4993.0,
+      "sampled_cpu_rss_peak_mib": 6091.68,
+      "measurement": "PyTorch process allocator, includes model loading; excludes driver/other processes",
+      "device_measurement": "nvidia-smi device 0 total used memory sampled about every 0.2s plus query time; may miss brief peaks and includes other processes"
+    },
+    "finished_at_utc": "2026-10-12T09:55:01.841359+00:00"
+  },
+  "verification": {
+    "passed": true,
+    "images": 3669,
+    "source_images_verified": true,
+    "all_raw_ids_to_input_tokens_verified": true,
+    "all_answer_records_verified": true,
+    "receiver_image_access_guard_all": true,
+    "no_receiver_visual_encoder_all": true,
+    "new_reference_equivalence": true,
+    "old_200_reinference_matches": 200,
+    "old_200_differences": [],
+    "finished_at_utc": "2026-10-12T11:40:50.948005+00:00"
+  },
+  "environment": {
+    "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+    "executable": "C:\\Users\\XYZ\\.conda\\envs\\show-o-token-link\\python.exe",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "packages": {
+      "accelerate": "0.21.0",
+      "antlr4-python3-runtime": "4.9.3",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.2",
+      "colorama": "0.4.6",
+      "decorator": "5.1.1",
+      "diffusers": "0.30.1",
+      "einops": "0.6.0",
+      "filelock": "3.14.0",
+      "fsspec": "2023.6.0",
+      "huggingface-hub": "0.24.7",
+      "idna": "3.20",
+      "importlib_metadata": "8.5.0",
+      "jaxtyping": "0.2.28",
+      "Jinja2": "3.1.4",
+      "MarkupSafe": "3.0.4",
+      "mpmath": "1.4.1",
+      "networkx": "3.2.1",
+      "numpy": "1.24.4",
+      "omegaconf": "2.3.0",
+      "packaging": "26.3",
+      "pillow": "10.3.0",
+      "pip": "26.2.1",
+      "psutil": "5.9.8",
+      "PyYAML": "6.0.1",
+      "regex": "2024.5.15",
+      "requests": "2.31.0",
+      "safetensors": "0.4.3",
+      "setuptools": "83.0.0",
+      "sympy": "1.12",
+      "tokenizers": "0.19.1",
+      "torch": "2.2.1+cu121",
+      "torchvision": "0.17.1+cu121",
+      "tqdm": "4.66.4",
+      "transformers": "4.41.1",
+      "typeguard": "2.13.3",
+      "typing_extensions": "4.12.0",
+      "urllib3": "2.8.0",
+      "wheel": "0.47.0",
+      "zipp": "4.1.1"
+    },
+    "torch_cuda": "12.1",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_total_mib": 8187.5,
+    "ram_total_gib": 15.730522155761719,
+    "upstream_commit": "45a5a2de01d1ebd10cd5864d29310a76476cdf23",
+    "nvidia_smi": "Mon Oct 12 16:29:46 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 616.56                 KMD Version: 616.56        CUDA UMD Version: 13.4     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |\n| N/A   45C    P0             14W /  125W |       0MiB /   8188MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+    "weights": {
+      "magvitv2": {
+        "repo_id": "showlab/magvitv2",
+        "revision": "5c3fa78f8b3523347c5cd1a4c97f3c4e96f33d5d",
+        "path": "E:\\py_Prjs\\show-o-token-link\\weights\\magvitv2",
+        "files": {
+          "config.json": {
+            "bytes": 66,
+            "sha256": "75b8e650dce094065e2da4983c323f8ca943ed76b8ec8960aef99dafa3d04e6d"
+          },
+          "pytorch_model.safetensors": {
+            "bytes": 382013656,
+            "sha256": "79656bf974d99c215465a61df5e93b97e03282b0941f62f6294719527873b778"
+          }
+        }
+      },
+      "phi": {
+        "repo_id": "microsoft/phi-1_5",
+        "revision": "77aa61eeac94fbf33d492b9f2744c98b42d5b5eb",
+        "path": "E:\\py_Prjs\\show-o-token-link\\weights\\phi",
+        "files": {
+          "added_tokens.json": {
+            "bytes": 1080,
+            "sha256": "eca8e90d1be6af3afeb1a37f070f9492645c551a9fb2e1ce2a4a8b21f04ffc8b"
+          },
+          "config.json": {
+            "bytes": 736,
+            "sha256": "2fe52126434075e8a23aca5bfed8cca8aff7051779e6f11c76de9e9e9923dcef"
+          },
+          "merges.txt": {
+            "bytes": 456318,
+            "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
+          },
+          "special_tokens_map.json": {
+            "bytes": 99,
+            "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad"
+          },
+          "tokenizer.json": {
+            "bytes": 2114924,
+            "sha256": "337da36be7a71a6e88aa9148967a7bc8736f4b47c7de8e19ba92b89e80734cfc"
+          },
+          "tokenizer_config.json": {
+            "bytes": 237,
+            "sha256": "001d5ef96609ff1bc02c1b7edabf97d4617c450620cf8dfbbad97c27cd9b5cb6"
+          },
+          "vocab.json": {
+            "bytes": 798156,
+            "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7"
+          }
+        }
+      },
+      "showo": {
+        "repo_id": "showlab/show-o",
+        "revision": "c2c6f548c00444432a97bc8fbbce7b2fd73fc9b5",
+        "path": "E:\\py_Prjs\\show-o-token-link\\weights\\showo",
+        "files": {
+          "config.json": {
+            "bytes": 252,
+            "sha256": "bbc2e4b0076d2b1a8b624c916c66252745c776abf7622e91b761ccd59fc00c5f"
+          },
+          "pytorch_model.safetensors": {
+            "bytes": 5792758016,
+            "sha256": "67ca6506dc5a0d47bed8f4aa957c9b23153df0d33540b188ac65115cad7eaea4"
+          }
+        }
+      }
+    }
+  },
+  "manifest_sha256": "1af4f36965ca345fda51be68a52acabe0d28607c7c99cb1208b713405c24cea9",
+  "error_row_indices": [
+    5,
+    6,
+    20,
+    298,
+    607,
+    695,
+    715,
+    1785,
+    2519,
+    2529,
+    2532,
+    2534,
+    2675,
+    3258,
+    3270,
+    3280,
+    3286,
+    3295,
+    3322,
+    3324,
+    3325,
+    3328,
+    3330,
+    3335,
+    3336,
+    3339,
+    3341,
+    3344,
+    3347,
+    3349,
+    3351,
+    3353,
+    3357,
+    3358,
+    3359,
+    3360,
+    3363,
+    3364,
+    3366,
+    3367,
+    3374,
+    3379
+  ],
+  "history": {
+    "archive": "archive/baseline-history.zip",
+    "original_directory": "reports/showo-512/oxford-pets/full"
+  },
+  "current_status": "Published baseline; immutable inference records; use a new output for new runs"
+}

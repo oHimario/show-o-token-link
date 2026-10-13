@@ -1,0 +1,7 @@
+{
+  "current_layout": "Three core scripts; per-model report; per-dataset JSONL evidence",
+  "archive": "archive/baseline-history.zip",
+  "index": "archive/manifest.json",
+  "previous_manifest_member": "reports/project/layout-migration/manifest.json",
+  "note": "Original prior migrations are in the archive. Look up an old relative path in archive/manifest.json.files."
+}

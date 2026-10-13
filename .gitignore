@@ -1,0 +1,9 @@
+.env/
+.vscode/
+.cache/
+archive/
+data/
+upstream/
+weights/
+__pycache__/
+*.pyc

@@ -1,0 +1,121 @@
+{
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "executable": "C:\\Users\\XYZ\\.conda\\envs\\show-o-token-link\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "accelerate": "0.21.0",
+    "antlr4-python3-runtime": "4.9.3",
+    "certifi": "2026.7.22",
+    "charset-normalizer": "3.5.2",
+    "colorama": "0.4.6",
+    "decorator": "5.1.1",
+    "diffusers": "0.30.1",
+    "einops": "0.6.0",
+    "filelock": "3.14.0",
+    "fsspec": "2023.6.0",
+    "huggingface-hub": "0.24.7",
+    "idna": "3.20",
+    "importlib_metadata": "8.5.0",
+    "jaxtyping": "0.2.28",
+    "Jinja2": "3.1.4",
+    "MarkupSafe": "3.0.4",
+    "mpmath": "1.4.1",
+    "networkx": "3.2.1",
+    "numpy": "1.24.4",
+    "omegaconf": "2.3.0",
+    "packaging": "26.3",
+    "pillow": "10.3.0",
+    "pip": "26.2.1",
+    "psutil": "5.9.8",
+    "PyYAML": "6.0.1",
+    "regex": "2024.5.15",
+    "requests": "2.31.0",
+    "safetensors": "0.4.3",
+    "setuptools": "83.0.0",
+    "sympy": "1.12",
+    "tokenizers": "0.19.1",
+    "torch": "2.2.1+cu121",
+    "torchvision": "0.17.1+cu121",
+    "tqdm": "4.66.4",
+    "transformers": "4.41.1",
+    "typeguard": "2.13.3",
+    "typing_extensions": "4.12.0",
+    "urllib3": "2.8.0",
+    "wheel": "0.47.0",
+    "zipp": "4.1.1"
+  },
+  "torch_cuda": "12.1",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_total_mib": 8187.5,
+  "ram_total_gib": 15.730522155761719,
+  "upstream_commit": "45a5a2de01d1ebd10cd5864d29310a76476cdf23",
+  "nvidia_smi": "Fri Oct  9 15:36:43 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 616.56                 KMD Version: 616.56        CUDA UMD Version: 13.4     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |\n| N/A   49C    P0             14W /   80W |       0MiB /   8188MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+  "weights": {
+    "magvitv2": {
+      "repo_id": "showlab/magvitv2",
+      "revision": "5c3fa78f8b3523347c5cd1a4c97f3c4e96f33d5d",
+      "path": "E:\\py_Prjs\\show-o-token-link\\weights\\magvitv2",
+      "files": {
+        "config.json": {
+          "bytes": 66,
+          "sha256": "75b8e650dce094065e2da4983c323f8ca943ed76b8ec8960aef99dafa3d04e6d"
+        },
+        "pytorch_model.safetensors": {
+          "bytes": 382013656,
+          "sha256": "79656bf974d99c215465a61df5e93b97e03282b0941f62f6294719527873b778"
+        }
+      }
+    },
+    "phi": {
+      "repo_id": "microsoft/phi-1_5",
+      "revision": "77aa61eeac94fbf33d492b9f2744c98b42d5b5eb",
+      "path": "E:\\py_Prjs\\show-o-token-link\\weights\\phi",
+      "files": {
+        "added_tokens.json": {
+          "bytes": 1080,
+          "sha256": "eca8e90d1be6af3afeb1a37f070f9492645c551a9fb2e1ce2a4a8b21f04ffc8b"
+        },
+        "config.json": {
+          "bytes": 736,
+          "sha256": "2fe52126434075e8a23aca5bfed8cca8aff7051779e6f11c76de9e9e9923dcef"
+        },
+        "merges.txt": {
+          "bytes": 456318,
+          "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
+        },
+        "special_tokens_map.json": {
+          "bytes": 99,
+          "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad"
+        },
+        "tokenizer.json": {
+          "bytes": 2114924,
+          "sha256": "337da36be7a71a6e88aa9148967a7bc8736f4b47c7de8e19ba92b89e80734cfc"
+        },
+        "tokenizer_config.json": {
+          "bytes": 237,
+          "sha256": "001d5ef96609ff1bc02c1b7edabf97d4617c450620cf8dfbbad97c27cd9b5cb6"
+        },
+        "vocab.json": {
+          "bytes": 798156,
+          "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7"
+        }
+      }
+    },
+    "showo": {
+      "repo_id": "showlab/show-o",
+      "revision": "c2c6f548c00444432a97bc8fbbce7b2fd73fc9b5",
+      "path": "E:\\py_Prjs\\show-o-token-link\\weights\\showo",
+      "files": {
+        "config.json": {
+          "bytes": 252,
+          "sha256": "bbc2e4b0076d2b1a8b624c916c66252745c776abf7622e91b761ccd59fc00c5f"
+        },
+        "pytorch_model.safetensors": {
+          "bytes": 5792758016,
+          "sha256": "67ca6506dc5a0d47bed8f4aa957c9b23153df0d33540b188ac65115cad7eaea4"
+        }
+      }
+    }
+  }
+}
